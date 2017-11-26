@@ -1,1 +1,0 @@
-/home/ubuntu/eve-sso/header.php
