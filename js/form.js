@@ -5,14 +5,13 @@ $(function(){
 		$.ajax({
 			url: 'ajax/eft-parser.php',
 			type: 'POST',
-			//dataType: 'json',
-			data: {fit: $('textarea[name="fit"]').val()},
-		})
-		.done(function(data) {
-			console.log("success:",data);
-		})
-		.fail(function(data) {
-			console.log("fail:",data);
+			data: {eft: $('textarea[name="eft"]').val()},
+			success: function(data) {
+				console.log(data);
+			},
+			fail: function(data) {
+				console.log(data);
+			}
 		})
 	});
 

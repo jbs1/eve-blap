@@ -25,11 +25,13 @@ echo '<title>EUni BLAP Fittings</title>
 
 echo '
 <h2>EFT Fit:</h2>
-<form id="fitting_form">
-<p><textarea name="fit" rows="25" cols="70"></textarea></p>
+<form id="fitting_form" accept-charset="utf-8">
+<p><textarea name="eft" rows="25" cols="70"></textarea></p>
 <input type="submit">
 </form>
 ';
+
+echo '<div id="out"></div>';
 
 
 echo '</body>
