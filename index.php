@@ -1,10 +1,10 @@
 <?php
-require_once('oauth-header.php');
+// require_once('oauth-header.php');
 
-if(empty($_SESSION['token-object'])){//if not logged in redirect to
-	header('Location: oauth.php');
-} else {
-	refresh_token();
+// if(empty($_SESSION['token-object'])){//if not logged in redirect to
+// 	header('Location: oauth.php');
+// } else {
+// 	refresh_token();
 
 echo '<!DOCTYPE html>
 <html>
@@ -37,6 +37,6 @@ echo '<div id="out"></div>';
 echo '</body>
 </html>';
 
-}
+// }
 
 ?>

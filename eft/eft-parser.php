@@ -1,5 +1,5 @@
 <?php
-require_once('../parser-func.php');
+require_once('parser-func.php');
 header('Content-Type: application/json;charset=utf-8');
 
 $json=array();
@@ -16,7 +16,7 @@ $json["ship"]=array("name"=>$match[1],"id"=>get_typeid($match[1]));
 
 foreach ($split as $value) {
 	if(!empty($value)&&preg_match("/\[.+\]/",$value)===0){//if it is not empty line or pyfa [empty slot]
-		preg_match("/(?:([\w -]+) x\d+|([\w -]+)),*[\w ]*/", $value, $match);//take module name without ammo & special case for stuff with amount (eg. Hobgoblin x5). selecting proper match group via empty($match[1])?$match[2]:$match[1])
+		preg_match("/(?:([\w -']+) x\d+|([\w -']+)),*[\w ]*/", $value, $match);//take module name without ammo & special case for stuff with amount (eg. Hobgoblin x5). selecting proper match group via empty($match[1])?$match[2]:$match[1])
 		$current_match=empty($match[1])?$match[2]:$match[1];
 
 		switch ($eft_module_order[0]) {//check what module type we are currently checking

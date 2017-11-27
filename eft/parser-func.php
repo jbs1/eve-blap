@@ -16,7 +16,8 @@ function db_select_array($query)
 
 function get_typeid($name)
 {
-	return db_select_array("SELECT typeID FROM invTypes WHERE typeName='$name'")[0]["typeID"];
+	$escaped=SQLite3::escapeString($name);
+	return db_select_array("SELECT typeID FROM invTypes WHERE typeName='$escaped'")[0]["typeID"];
 }
 
 function is_low($typeid)
