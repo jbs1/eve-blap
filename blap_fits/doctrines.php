@@ -15,8 +15,6 @@ echo '<!DOCTYPE html>
 
 echo '<div id="content"></div>';
 
-
-
 echo '</body>
 </html>';
 

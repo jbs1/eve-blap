@@ -34,6 +34,9 @@ echo '
 echo '<div id="out"></div>';
 
 
+echo '<p><a href="blap_fits/doctrines.php">BLAP DOCTRINES</a></p>';
+
+
 echo '</body>
 </html>';
 
